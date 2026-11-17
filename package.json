@@ -1,0 +1,43 @@
+{
+  "name": "hotelflow",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HotelFlow — app (PWA) para equipes de hotéis, resorts e pousadas",
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/migrate.mjs && next build",
+    "build:app": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:migrate": "node scripts/migrate.mjs --required",
+    "db:bundle": "node scripts/bundle-schema.mjs",
+    "icons": "node scripts/generate-icons.mjs",
+    "test:i18n": "node --experimental-strip-types scripts/check-i18n.ts",
+    "test:e2e": "playwright test --trace off"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.119.0",
+    "@tanstack/react-query": "5.108.0",
+    "lucide-react": "1.74.0",
+    "next": "16.4.6",
+    "pg": "8.23.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "web-push": "4.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/postcss": "4.3.5",
+    "@types/node": "22.20.5",
+    "@types/pg": "8.23.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/web-push": "3.6.4",
+    "sharp": "0.35.5",
+    "tailwindcss": "4.3.5",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}
